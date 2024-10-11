@@ -1,12 +1,13 @@
 const prompt = require("prompt-sync")();
 
-/* SCORE OBJECT */
-
-let score = {
-    wins: 0,
-    losses: 0,
-    draws: 0
+if (typeof localStorage === "undefined" || localStorage === null) {
+    var LocalStorage = require('node-localstorage').LocalStorage;
+    localStorage = new LocalStorage('./scratch');
 }
+
+/* SCORE OBJECT */
+let scoreJson = localStorage.getItem("score");
+let score = JSON.parse(scoreJson);
 
 /* MAIN CODE */
 
@@ -14,7 +15,7 @@ let score = {
 
 let userMove = prompt("rock, paper or scissors?: ");
 while (!(userMove === 'rock' || userMove === 'paper' || userMove === 'scissors')) {
-    userMove = prompt("Please type 'rock', 'paper' or 'scissors'.");
+    userMove = prompt("Please type 'rock', 'paper' or 'scissors': ");
 } 
 
 let computerMove = pickComputerMove();
@@ -37,11 +38,10 @@ if (result === 'win') {
 }
 
 /* JSON STRINGIFY + SAVE TO LOCALSTORAGE */
-let scoreJson = JSON.stringify(score);
+scoreJson = JSON.stringify(score);
 localStorage.setItem("score", scoreJson);
 
 /* LOG RESULTS */
-// TODO
 console.log(`Wins: ${score.wins} - Losses: ${score.losses} - Draws: ${score.draws}`);
 
 /* FUNCTIONS */
