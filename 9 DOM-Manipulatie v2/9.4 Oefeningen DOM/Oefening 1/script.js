@@ -1,24 +1,5 @@
-/* Versie 1
-button.addEventListener('click', () => {
-    if (button.innerHTML === "Subscribe") {
-        button.innerHTML = "Subscribed"
-    } else {
-        button.innerHTML = "Subscribe"
-    }
-});
-*/
+let button = document.createElement('button');
+button.innerHTML = 'Click me!';
+document.body.appendChild(button);
 
-/* Versie 2 */
-let button = document.querySelector("button");
-
-// Let op! De functie subcribe wordt als parameter
-// meegegeven zonder haken!
-button.addEventListener('click', subscribe);
-
-function subscribe() {
-    if (button.innerHTML === "Subscribe") {
-        button.innerHTML = "Subscribed"
-    } else {
-        button.innerHTML = "Subscribe"
-    }
-}
+document.title = 'Append Button';
