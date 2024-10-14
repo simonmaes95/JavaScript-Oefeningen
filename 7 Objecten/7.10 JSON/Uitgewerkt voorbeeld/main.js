@@ -35,4 +35,4 @@ console.log(`New balance: ${bankAccount.balance}`);
 
 /* bankaccount terug omzetten naar JSON + opslaan in localStorage */
 bankAccountJson = JSON.stringify(bankAccount);
-localStorage.setItem("bankAccount", bankAccountJson); 
+localStorage.setItem("bankAccount", bankAccountJson);
