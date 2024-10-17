@@ -2,7 +2,7 @@ const prompt = require("prompt-sync")();
 
 let userMove = prompt("rock, paper or scissors?: ");
 while (!(userMove === 'rock' || userMove === 'paper' || userMove === 'scissors')) {
-    userMove = prompt("Please type 'rock', 'paper' or 'scissors'.");
+    userMove = prompt("Please type 'rock', 'paper' or 'scissors': ");
 } 
 
 let computerMove = pickComputerMove();

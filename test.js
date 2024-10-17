@@ -1,7 +1,6 @@
-let getal = 5;
+let fruits = ["apple", "banana", "cherry"];
+let [a, b, c] = fruits;
 
-if (getal > 10) {
-	// 
-	// 
-	//
-}
+console.log(a);
+console.log(b);
+console.log(c);
