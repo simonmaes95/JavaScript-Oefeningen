@@ -2,11 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title>Oefening 1 - Subscribe Button</title>
+        <title>Form</title>
     </head>
     <body>
-        <p>Youtube Subscribe Button</p>
-        <button>Subscribe</button>
+        <div>
+            <p>Name</p>
+            <input type="text" id="input-name"/>
+    
+            <p>Surname</p>
+            <input type="text" id="input-surname"/>
+    
+            <p>Email-address</p>
+            <input type="text" id="input-email"/>
+        </div>
+
+        <button id="button-submit" onclick="addAccount()">Submit</button>
 
         <script src="script.js"></script>
     </body>

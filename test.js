@@ -1,6 +1,10 @@
-let fruits = ["apple", "banana", "cherry"];
-let [a, b, c] = fruits;
+function haalSubzin(zin, woord) {
+    let zinnen = zin.split(". ");
+    let result = zinnen.find(zin => {
+        return zin.indexOf(woord) == 0;
+    });
+    return result;
+}
 
-console.log(a);
-console.log(b);
-console.log(c);
+let zin = "Dit is een Test. Een korte test."
+console.log(haalSubzin(zin, "Een"));

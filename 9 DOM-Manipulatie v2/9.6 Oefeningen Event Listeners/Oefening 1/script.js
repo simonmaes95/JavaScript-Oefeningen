@@ -1,24 +1,16 @@
-/* Versie 1
-button.addEventListener('click', () => {
-    if (button.innerHTML === "Subscribe") {
-        button.innerHTML = "Subscribed"
-    } else {
-        button.innerHTML = "Subscribe"
-    }
-});
-*/
+let inputName = document.querySelector("#input-name");
+let inputSurname = document.querySelector("#input-surname");
+let inputEmail = document.querySelector("#input-email");
 
-/* Versie 2 */
-let button = document.querySelector("button");
+let name = inputName.value;
+let surname = inputSurname.value;
+let email = inputEmail.value;
 
-// Let op! De functie subcribe wordt als parameter
-// meegegeven zonder haken!
-button.addEventListener('click', subscribe);
+function addAccount() {
+    let name = inputName.value;
+    let surname = inputSurname.value;
+    let email = inputEmail.value;
 
-function subscribe() {
-    if (button.innerHTML === "Subscribe") {
-        button.innerHTML = "Subscribed"
-    } else {
-        button.innerHTML = "Subscribe"
-    }
+    console.log(`${name}, ${surname}, ${email}`);
 }
+
