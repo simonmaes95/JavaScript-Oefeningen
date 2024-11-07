@@ -6,10 +6,18 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 }
 
 /* SCORE OBJECT */
-let scoreJson = localStorage.getItem("score");
-let score = JSON.parse(scoreJson);
+let score = {
+	wins: 0,
+    losses: 0,
+    draws: 0
+};
 
-/* MAIN CODE */
+let scoreJson = localStorage.getItem("score");
+if (scoreJson) {
+    score = JSON.parse(scoreJson);
+}
+
+/* -----------------MAIN CODE----------------- */
 
 /* CHOOSE MOVES */
 
@@ -44,7 +52,7 @@ localStorage.setItem("score", scoreJson);
 /* LOG RESULTS */
 console.log(`Wins: ${score.wins} - Losses: ${score.losses} - Draws: ${score.draws}`);
 
-/* FUNCTIONS */
+/* -----------------FUNCTIONS----------------- */
 
 function decideWinner(userMove, computerMove) {
     let result;
