@@ -8,7 +8,7 @@ class Car {
         return this._mileage;
     }
 
-    set mileage(nieuweStand) {
+    set mileage(newMileage) {
         if (newMileage > this._mileage) {
             this._mileage = newMileage;
         } else {

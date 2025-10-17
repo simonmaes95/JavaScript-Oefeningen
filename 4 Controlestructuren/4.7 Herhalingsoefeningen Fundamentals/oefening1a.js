@@ -1,12 +1,9 @@
 const prompt = require("prompt-sync")();
 
 let aantalLijnen = prompt("Hoeveel lijnen wil je afdrukken? ");
-
+let lijn = "";
 for (let i = 1; i <= aantalLijnen; i++) {
-    let lijn = "";
-    for (let j = 0; j < i; j++) {
-        lijn += "#";
-    }
+    lijn += "#";
     console.log(lijn);
 }
 

@@ -1,21 +1,14 @@
 const prompt = require("prompt-sync")();
 
-let aantalLijnen = prompt("Hoeveel lijnen wil je afdrukken? ");
-let aantalTekensInEenLijn = aantalLijnen * 2 - 1;
-let aantalHekjes = 1;
+let lines = prompt("How many lines: ");
 
-for (let i = 1; i <= aantalLijnen; i++) {
-    let lijn = "";
-    for (let j = 1; j <= (aantalTekensInEenLijn - aantalHekjes) / 2; j++) {
-        lijn += " ";
+for (let i = 1; i <= lines; i++) {
+    let line = "";
+    for (let j = 1; j <= lines - i; j++) {
+        line += " ";
     }
-    for (let k = 1; k <= aantalHekjes; k++) {
-        lijn += "#";
+    for (let k = 0; k < 2 * i - 1; k++) {
+        line += "#";
     }
-
-    for (let l = 1; l < (aantalTekensInEenLijn - aantalHekjes) / 2; l++){
-        lijn += " ";
-    }
-    aantalHekjes += 2;
-    console.log(lijn);
+    console.log(line);
 }

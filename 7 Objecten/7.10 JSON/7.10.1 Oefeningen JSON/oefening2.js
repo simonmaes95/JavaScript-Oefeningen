@@ -7,7 +7,7 @@ let gebruikersVoorkeuren = {
     kleurenschema: "donker",
     lettergrootte: "16px",
     meldingen: true
-};
+}; 
 
 const voorkeurenJson = JSON.stringify(gebruikersVoorkeuren);
 localStorage.setItem("voorkeuren", voorkeurenJson);
